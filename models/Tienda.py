@@ -7,9 +7,9 @@ class tienda(osv.osv):
     _name = 'co.tienda'
     _description = 'CO Tienda'
 
-        _columns = {
+    _columns = {
         'name': fields.char('Tienda'),
         'address': fields.char('Dirección'),
     }
 
-    tienda()
+tienda()
