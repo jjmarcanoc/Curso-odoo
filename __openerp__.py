@@ -5,7 +5,10 @@
     'description': 'Este módulo es para aprender OpenERP',
     'author': 'Aristobulo',
     'version': 'dia1',
-    'depends': ['base', ],
-    'data': [],
+    'depends': ['base', 'mail', ],
+    'data': [
+        'views/curso_odoo_view.xml',
+        'views/multimedia_view.xml',
+    ],
     'demo': [],
 }
