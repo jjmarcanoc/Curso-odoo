@@ -6,6 +6,8 @@ from openerp.osv import osv, fields
 class multimedia(osv.osv):
     _name = 'co.multimedia'
     _description = 'CO Multimedia'
+    _rec_name = 'title'
+    _order = 'release_date desc'
     
     _columns = {
         'title': fields.char('Título', required=True),
