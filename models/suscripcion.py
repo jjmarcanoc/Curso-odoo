@@ -13,12 +13,14 @@ TIPOS = [
 class suscripcion(osv.osv):
     _name = 'co.suscripcion'
     _description = 'CO Suscripcion'
+    _rec_name = 'code'
     
     _columns = {
-        'code': fields.char('Código'),
-        'type': fields.selection(TIPOS, 'Tipo de suscripción'),
-        'date_start': fields.date('Inicio suscripción'),
-        'date_end': fields.date('Fin suscripción'),
+        'code': fields.char('Código',
+        help="Codigo se genera de forma automatica"),
+        'type': fields.selection(TIPOS, 'Tipo de suscripción', required=True),
+        'date_start': fields.date('Inicio suscripción', required= True),
+        'date_end': fields.date('Fin suscripción', required=True),
         'active': fields.boolean('Activo'),
         'suscriptor_id': fields.many2one('co.suscriptor', 'Afiliado'),
     }
@@ -28,6 +30,19 @@ class suscripcion(osv.osv):
         'date_start': datetime.now().strftime('%Y-%m-%d'),
     }
     
+    def _check_dates(self, cr, uid, ids, context=None):
+		if isinstance(ids, (int, long)):
+			ids = [ids]
+		for s in self.browse(cr, uid, ids, context=context):
+			if s.date_end <= s.date_start:
+				return False
+		return True
+
+    _constraints = [
+		(_check_dates, 'Fecha de inicio debe ser menor a la fecha final',
+		['date_start', 'date_end'])
+    ]
+        
     def create(self, cr, uid, values, context=None):
         if context is None:
             context = {}

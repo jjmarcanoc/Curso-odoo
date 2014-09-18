@@ -13,4 +13,6 @@ class suscriptor(osv.osv):
         'address': fields.text('Dirección'),
     }
     
+    _sql_constraints = [('identification_uniq', 'unique(identification)', u'Ya existe el número de cédula')]
+    
 suscriptor()
