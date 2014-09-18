@@ -8,7 +8,9 @@ class categoria(osv.osv):
     _descripcion = 'CO Categoria'
 
     _columns = {
+        "active": fields.boolean("active"),
         'name': fields.char('Nombre'),
+        'code': fields.char('Codigo'),
         'description': fields.text('Descripción'),
         'parent_id': fields.many2one('co.categoria', 'Padre'),
         'child_ids': fields.one2many(

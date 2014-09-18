@@ -10,7 +10,7 @@ class suscriptor(osv.osv):
     _columns = {
         'name': fields.char('Nombre'),
         'identification': fields.char('Cédula'),
-        'Adress': fields.text('Dirección'),
+        'address': fields.text('Dirección'),
         }
 
 suscriptor()

@@ -4,6 +4,6 @@ import suscripcion
 import categoria
 import tipo_medio
 import multimedia
-import Tienda
+import tienda
 import stock
 import solicitud
