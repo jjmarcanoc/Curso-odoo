@@ -7,6 +7,7 @@ class multimedia(osv.osv):
     _name = 'co.multimedia'
     _description = 'CO Multimedia'
     _rec_name = 'title'
+<<<<<<< HEAD
     _order = 'release_date desc'
     
     def _compute_stock(self, cr, uid, ids, field_name, arg,context):
@@ -28,13 +29,30 @@ class multimedia(osv.osv):
         'release_date': fields.date('Fecha de publicación'),
         'code': fields.char('Código'),
         'categoria_id': fields.many2one('co.categoria', 'Categoría'),
+=======
+    _order = 'release_date'
+
+    _columns = {
+        'title': fields.char('Titulo', required=True),
+        'release_date': fields.date('Fecha de publicación'),
+        'code': fields.char('Código'),
+        'categoria_id': fields.many2one('co.categoria', 'Categoria'),
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
         'medio_ids': fields.many2many(
             'co.tipo.medio',
             'co_multimedia_medio_rel',
             'multimedia_id',
+<<<<<<< HEAD
             'medio_id'),            
 		'stock': fields.function(_compute_stock, type='integer'),
       
     }
     
 multimedia()
+=======
+            'medio_id',),
+    }
+
+
+multimedia()
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c

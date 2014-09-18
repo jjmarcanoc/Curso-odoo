@@ -2,12 +2,17 @@
 <openerp>
     <data>
 <!--
+<<<<<<< HEAD
         Vista form de CO categoria
+=======
+            Vista form de CO categoria
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 -->
         <record id="view_categoria_form" model="ir.ui.view">
             <field name="name">co.categoria.form</field>
             <field name="model">co.categoria</field>
             <field name="arch" type="xml">
+<<<<<<< HEAD
                 <form string="Categoría" version="7.0">
                     <sheet>
                         <div class="oe_title">
@@ -18,15 +23,35 @@
                             <label for="parent_id" class="oe_edit_only"/>
                             <h3>
                                 <field name="parent_id"/>
+=======
+                <form string="Categoria" version="7.0">
+                    <sheet>
+                        <label for="active" />
+                        <field name="active" />
+                        <separator />
+                        <div class="oe_title">
+                            <label for="code" class="oe_edit_only"/>
+                            <h1>
+                                <field name="code" readonly="1"/>
+                            </h1>
+                            <h3>
+                                <label for="suscriptor_id" />
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
                             </h3>
                         </div>
                         <notebook>
                             <page string="Detalles">
+<<<<<<< HEAD
                                 <group string="Descripción" >
                                     <field name="description" nolabel="1"/>
                                 </group>
                                 <group string="Subcategorías">
                                     <field name="child_ids" nolabel="1"/>
+=======
+                                <group>
+                                    <field name="name"/>
+                                    <field name="description"/>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
                                 </group>
                             </page>
                         </notebook>
@@ -34,13 +59,20 @@
                 </form>
             </field>
         </record>
+<<<<<<< HEAD
         
 <!--
         Vista tree de CO categoria
+=======
+
+<!--
+            Vista tree de CO categoria
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 -->
         <record id="view_categoria_tree" model="ir.ui.view">
             <field name="name">co.categoria.tree</field>
             <field name="model">co.categoria</field>
+<<<<<<< HEAD
             <field name="field_parent">child_ids</field>
             <field name="arch" type="xml">
                 <tree string="Categorías">
@@ -52,12 +84,25 @@
         
         <record id="action_categoria" model="ir.actions.act_window">
             <field name="name">Categoría</field>
+=======
+            <field name="arch" type="xml">
+                <tree string="Categoria">
+                    <field name="parent_id"/>
+                    <field name="child_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_categoria" model="ir.actions.act_window">
+            <field name="name">categoria</field>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
             <field name="res_model">co.categoria</field>
             <field name="view_type">form</field>
             <field name="view_mode">form,tree</field>
             <field name="view_id" ref="view_categoria_tree" />
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
+<<<<<<< HEAD
                     Acá se registran las categorías.
                 </p>
             </field>
@@ -67,3 +112,14 @@
                   sequence="10" parent="submenu_multimedia" />
     </data>
 </openerp>
+=======
+                    Acá se registran las categoriaes.
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="action_categoria" id="menu_categoria"
+            sequence="5" parent="submenu_multimedia" />
+    </data>
+</openerp>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c

@@ -6,13 +6,18 @@ from datetime import datetime
 TIPOS = [
     ('oro', 'Plan ORO'),
     ('plata', 'Plan PLATA'),
+<<<<<<< HEAD
     ('bronce', 'Plan BRONCE'),
 ]
 
+=======
+    ('bronce', 'Plan BRONCE'),]
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 
 class suscripcion(osv.osv):
     _name = 'co.suscripcion'
     _description = 'CO Suscripcion'
+<<<<<<< HEAD
     _rec_name = 'code'
     
     _columns = {
@@ -60,3 +65,30 @@ suscripcion()
 
 
     
+=======
+
+    _columns = {
+        'code': fields.char('Código'),
+        'type': fields.selection(TIPOS, 'Tipo de suscripción'),
+        'date_start': fields.date('Inicio suscripción'),
+        'date_end': fields.date('Fin suscripción'),
+        'active': fields.boolean('Activo'),
+        'suscriptor_id': fields.many2one('co.suscriptor', 'Afiliado'),
+    }
+
+    _default = {
+        'active': True,
+        'date_start': datetime.now().strftime('%Y-%m-&d'),
+    }
+
+    def create(self, cr, uid, ids, values, context=None):
+        if context is None:
+            context = {}
+
+        values.update({
+            'code': self.pool.get('ir.secuence').get(cr,uid, 'seq.suscripcion')})
+
+        return super(suscripcion, self).create(cr, uid, values, context=context)
+
+suscripcion()
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c

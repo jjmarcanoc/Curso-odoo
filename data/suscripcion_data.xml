@@ -5,6 +5,7 @@
             <field name="name">Secuencia suscripcion</field>
             <field name="code">seq.suscripcion</field>
         </record>
+<<<<<<< HEAD
         
         <record id="seq_suscripcion" model="ir.sequence">
             <field name="name">Secuencia suscripcion</field>
@@ -14,3 +15,14 @@
         </record>
     </data>
 </openerp>
+=======
+
+        <record id="seq_suscripcion" model="ir.sequence">
+            <field name="name">Secuencia suscripcion</field>
+            <field name="code">seq.suscripcion</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">SUS/%(year)s/</field>
+        </record>
+    </data>
+</openerp>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c

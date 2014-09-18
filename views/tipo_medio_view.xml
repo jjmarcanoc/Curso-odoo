@@ -2,38 +2,65 @@
 <openerp>
     <data>
 <!--
+<<<<<<< HEAD
         Vista form de CO Tipo Medio
+=======
+            Vista form de CO Tipo Medio
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 -->
         <record id="view_tipo_medio_form" model="ir.ui.view">
             <field name="name">co.tipo.medio.form</field>
             <field name="model">co.tipo.medio</field>
             <field name="arch" type="xml">
+<<<<<<< HEAD
                 <form string="Tipo de medio" version="7.0">
                     <sheet>
                         <div class="oe_title">
                             <label for="name" class="oe_edit_only"/>
                             <h1>
                                 <field name="name"/>
+=======
+                <form string="Tipo de Medio" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="title" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" />
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
                             </h1>
                         </div>
                     </sheet>
                 </form>
             </field>
         </record>
+<<<<<<< HEAD
         
 <!--
         Vista tree de CO Tipo Medio
+=======
+
+<!--
+            Vista tree de CO Tipo Medio
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 -->
         <record id="view_tipo_medio_tree" model="ir.ui.view">
             <field name="name">co.tipo.medio.tree</field>
             <field name="model">co.tipo.medio</field>
             <field name="arch" type="xml">
                 <tree string="Tipo de medio">
+<<<<<<< HEAD
                     <field name="name" />
                 </tree>
             </field>
         </record>
         
+=======
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
         <record id="action_tipo_medio" model="ir.actions.act_window">
             <field name="name">Tipo de medio</field>
             <field name="res_model">co.tipo.medio</field>
@@ -42,6 +69,7 @@
             <field name="view_id" ref="view_tipo_medio_tree" />
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
+<<<<<<< HEAD
                     Acá se registran los tipos de medios
                     en que estarán disponibles los contenidos
                     multimedia.
@@ -53,3 +81,15 @@
                   sequence="5" parent="submenu_multimedia" />
     </data>
 </openerp>
+=======
+                    Acá se registran los tipos de medio
+                    que estarán disponibles en el catálogo.
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="action_tipo_medio" id="menu_tipo_medio"
+            sequence="5" parent="submenu_multimedia" />
+    </data>
+</openerp>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c

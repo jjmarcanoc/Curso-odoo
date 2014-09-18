@@ -2,7 +2,11 @@
 <openerp>
     <data>
 <!--
+<<<<<<< HEAD
         Vista form de CO Multimedia
+=======
+            Vista form de CO Multimedia
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 -->
         <record id="view_multimedia_form" model="ir.ui.view">
             <field name="name">co.multimedia.form</field>
@@ -13,13 +17,20 @@
                         <div class="oe_title">
                             <label for="title" class="oe_edit_only"/>
                             <h1>
+<<<<<<< HEAD
                                 <field name="title"/>
                             </h1>
                             <label for="medio_ids" string="Disponible en" />
+=======
+                                <field name="title" />
+                            </h1>
+                            <label for="medio_ids" string="Disponible en"/>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
                             <field name="medio_ids" widget="many2many_tags" />
                         </div>
                         <notebook>
                             <page string="Detalles">
+<<<<<<< HEAD
 								<group>
 									<group>
 										<field name="stock" string="Disponibles" />
@@ -35,20 +46,37 @@
                                     <field name="medio_ids" nolabel="1"/>
                                 </group>
 -->
+=======
+                                <group>
+                                    <field name="release_date"/>
+                                    <field name="code" required="1"/>
+                                    <field name="categoria_id" />
+                                </group>
+<!--                                <group string= "Medios disponibles">
+                                    <field name="medio_ids" nolabel="1" />
+                                </group> -->
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
                             </page>
                         </notebook>
                     </sheet>
                 </form>
             </field>
         </record>
+<<<<<<< HEAD
         
 <!--
         Vista tree de CO Multimedia
+=======
+
+<!--
+            Vista tree de CO Multimedia
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 -->
         <record id="view_multimedia_tree" model="ir.ui.view">
             <field name="name">co.multimedia.tree</field>
             <field name="model">co.multimedia</field>
             <field name="arch" type="xml">
+<<<<<<< HEAD
                 <tree string="Multimedia">
                     <field name="title" />
                     <field name="release_date" />
@@ -59,6 +87,18 @@
             </field>
         </record>
         
+=======
+                <tree string="Multimedia" version="7.0">
+                    <field name="title"/>
+                    <field name="release_date"/>
+                    <field name="code"/>
+                    <field name="categoria_id"/>
+                    <field name="medio_ids"/>
+                </tree>
+            </field>
+        </record>
+
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
         <record id="action_multimedia" model="ir.actions.act_window">
             <field name="name">Multimedia</field>
             <field name="res_model">co.multimedia</field>
@@ -72,6 +112,7 @@
                 </p>
             </field>
         </record>
+<<<<<<< HEAD
         
         <menuitem action="action_multimedia" id="menu_multimedia"
                   sequence="5" parent="submenu_multimedia" />
@@ -84,3 +125,10 @@
 
 
 
+=======
+
+        <menuitem action="action_multimedia" id="menu_multimedia"
+            sequence="5" parent="submenu_multimedia" />
+    </data>
+</openerp>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c

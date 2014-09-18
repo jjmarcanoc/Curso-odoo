@@ -2,7 +2,11 @@
 <openerp>
     <data>
 <!--
+<<<<<<< HEAD
         Vista form de CO suscripcion
+=======
+            Vista form de CO suscripcion
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 -->
         <record id="view_suscripcion_form" model="ir.ui.view">
             <field name="name">co.suscripcion.form</field>
@@ -10,6 +14,7 @@
             <field name="arch" type="xml">
                 <form string="Suscripcion" version="7.0">
                     <sheet>
+<<<<<<< HEAD
                         <label for="active"/>
                         <field name="active" />
                         <separator />
@@ -21,14 +26,32 @@
                             <label for="suscriptor_id" class="oe_edit_only"/>
                             <h3>
                                 <field name="suscriptor_id" />
+=======
+                        <label for="active" />
+                        <field name="active" />
+                        <separator />
+                        <div class="oe_title">
+                            <label for="code" class="oe_edit_only"/>
+                            <h1>
+                                <field name="code" readonly="1"/>
+                            </h1>
+                            <h3>
+                                <label for="suscriptor_id" />
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
                             </h3>
                         </div>
                         <notebook>
                             <page string="Detalles">
                                 <group>
+<<<<<<< HEAD
                                     <field name="type" />
                                     <field name="date_start" />
                                     <field name="date_end" />
+=======
+                                    <field name="type"/>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
                                 </group>
                             </page>
                         </notebook>
@@ -36,14 +59,21 @@
                 </form>
             </field>
         </record>
+<<<<<<< HEAD
         
 <!--
         Vista tree de CO suscripcion
+=======
+
+<!--
+            Vista tree de CO suscripcion
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
 -->
         <record id="view_suscripcion_tree" model="ir.ui.view">
             <field name="name">co.suscripcion.tree</field>
             <field name="model">co.suscripcion</field>
             <field name="arch" type="xml">
+<<<<<<< HEAD
                 <tree string="suscripcion" colors="brown:type=='bronce';gray:type=='plata':orange:type=='oro'">
                     <field name="code" />
                     <field name="suscriptor_id" />
@@ -56,6 +86,20 @@
         
         <record id="action_suscripcion" model="ir.actions.act_window">
             <field name="name">Suscripción</field>
+=======
+                <tree string="suscripcion">
+                    <field name="code"/>
+                    <field name="active"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="suscriptor_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_suscripcion" model="ir.actions.act_window">
+            <field name="name">suscripcion</field>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
             <field name="res_model">co.suscripcion</field>
             <field name="view_type">form</field>
             <field name="view_mode">form,tree</field>
@@ -66,8 +110,16 @@
                 </p>
             </field>
         </record>
+<<<<<<< HEAD
         
         <menuitem action="action_suscripcion" id="menu_suscripcion"
                   sequence="5" parent="submenu_suscriptor" />
     </data>
 </openerp>
+=======
+
+        <menuitem action="action_suscripcion" id="menu_suscripcion"
+            sequence="5" parent="submenu_suscriptor" />
+    </data>
+</openerp>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c

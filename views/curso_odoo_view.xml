@@ -2,6 +2,7 @@
 <openerp>
     <data>
 <!--
+<<<<<<< HEAD
         Menu padre
 -->
         <menuitem id="menu_base_curso" name="Inicio" sequence="5" 
@@ -13,5 +14,30 @@
         <menuitem id="submenu_multimedia" name="Multimedia" 
                   parent="menu_base_curso" sequence="5" 
                   groups="group_admin,group_suscriptor"/>
+=======
+menu padre
+-->
+        <menuitem id="menu_base_curso" name="Inicio" sequence="5"
+                groups="base.group_user"/>
+
+<!--
+menu multimedia
+-->
+        <menuitem id="submenu_multimedia" name="Multimedia"
+        parent="menu_base_curso" sequence="5"
+                groups="base.group_user"/>
+
+        <menuitem id="submenu_suscriptor" name="Suscripciones"
+        parent="menu_base_curso" sequence="5"
+                groups="base.group_user"/>
+
+        <menuitem id="submenu_suscripcion" name="Suscripcion"
+        parent="menu_base_curso" sequence="5"
+                groups="base.group_user"/>
+
+        <menuitem id="submenu_solicitud" name="Suscripcion1"
+parent="menu_base_curso" sequence="5"
+        groups="base.group_user"/>
+>>>>>>> 49e77823fa409c00b7c13482df75d9f23f5fed1c
     </data>
 </openerp>
